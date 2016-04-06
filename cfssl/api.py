@@ -59,12 +59,8 @@ class Client(object):
         Request the remote CFSSL server sign the certificate request. For
         example,
 
-        {
-            "certificate_request": "-----BEGIN CERTIFICATE REQUEST-----\n..."
-            "profile": "client",
-            "label": ""
-        }
-
+        csr = "-----BEGIN CERTIFICATE REQUEST-----\n..."
+        print client.sign(csr, profile='www')
 
         """
         jso = {
